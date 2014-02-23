@@ -1,6 +1,6 @@
 ---
 
-- name: copy git config
+- name: copy git config from host
   copy: > 
     src=~/.gitconfig
     dest=~/.gitconfig 

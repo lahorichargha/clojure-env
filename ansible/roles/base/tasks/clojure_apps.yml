@@ -2,7 +2,8 @@
 
 - name: create the dev folder
   file: path=~/Dev state=directory
-- name: clone the clojure_apps repo
+
+- name: clone the clojure-apps repo
   git: >
     repo=https://github.com/technolo-g/clojure-apps.git
     dest=Dev/clojure-apps
