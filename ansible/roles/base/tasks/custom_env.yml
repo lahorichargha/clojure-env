@@ -1,0 +1,19 @@
+---
+
+- name: create dirstructure
+  command: mkdir -p ~/{tmp,bin}
+
+- name: install vim packages
+  sudo: yes
+  apt: pkg=exuberant-ctags state=present
+
+- name: clone the salt-mines repo
+  git: >
+    repo=https://github.com/technolo-g/salt-mines.git 
+    dest=/tmp/salt-mines
+    update=false
+
+- name: setup the salt mines
+  command: >
+    sh /tmp/salt-mines/deploy.sh
+    creates=~/.custom_env_created

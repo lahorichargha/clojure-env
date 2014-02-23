@@ -11,3 +11,5 @@
 - include: ssh_key.yml
 
 - include: git_config.yml
+
+- include: custom_env.yml
