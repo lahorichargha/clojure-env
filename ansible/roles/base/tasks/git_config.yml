@@ -1,0 +1,9 @@
+---
+
+- name: copy git config
+  copy: > 
+    src=~/.gitconfig
+    dest=~/.gitconfig 
+    owner=vagrant
+    group=vagrant
+    mode=0744

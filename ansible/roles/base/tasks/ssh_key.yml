@@ -1,0 +1,9 @@
+---
+
+- name: copy ssh key to vagrant host
+  copy: > 
+    src=~/.ssh/id_rsa
+    dest=.ssh/id_rsa 
+    owner=vagrant
+    group=vagrant
+    mode=0600
