@@ -1,4 +1,4 @@
-clojure-env
-===========
+clojure-the-door-on-your-way-out
+================================
 
-Clojure environment
+Playing with Clojure

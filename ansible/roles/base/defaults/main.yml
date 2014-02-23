@@ -1,0 +1,8 @@
+---
+
+base:
+  lein:
+    repo_url: https://github.com/technomancy/leiningen.git
+    version: 2.3.4
+  java:
+    package: openjdk-7-jdk

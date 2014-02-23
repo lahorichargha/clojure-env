@@ -1,0 +1,7 @@
+---
+
+- hosts: clojuredev
+  sudo: false
+  roles:
+    - role: base
+

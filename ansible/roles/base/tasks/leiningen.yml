@@ -1,0 +1,14 @@
+---
+
+- name: clone the repo to a temp dir
+  git: >
+    repo={{ base.lein.repo_url }}
+    dest=/tmp/leiningen
+    version={{ base.lein.version }}
+    update=no
+
+- name: copy the binary to /usr/local/sbin
+  sudo: true
+  command: >
+    cp -rp /tmp/leiningen/bin/lein /usr/local/sbin
+    creates=/usr/local/sbin/lein

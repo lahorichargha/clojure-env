@@ -1,0 +1,9 @@
+---
+
+- name: install git
+  sudo: true
+  apt: pkg=git state=present
+
+- name: install java
+  sudo: true
+  apt: pkg={{ base.java.package }} state=present
