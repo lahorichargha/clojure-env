@@ -7,3 +7,7 @@
 - name: install java
   sudo: true
   apt: pkg={{ base.java.package }} state=present
+
+- name: install tree
+  sudo: true
+  apt: pkg=tree
