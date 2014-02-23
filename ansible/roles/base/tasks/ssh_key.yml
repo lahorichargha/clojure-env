@@ -1,8 +1,8 @@
 ---
 
-- name: copy ssh key to vagrant host
+- name: copy ssh private key to vagrant host
   copy: > 
-    src=~/.ssh/id_rsa
+    src=creds/id_rsa
     dest=.ssh/id_rsa 
     owner=vagrant
     group=vagrant
