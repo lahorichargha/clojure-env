@@ -6,6 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |vagrant|
     override.vm.box_url = 'http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
     provider.customize ["modifyvm", :id, "--ioapic", "on"]
     provider.customize ["modifyvm", :id, "--cpus", "2"]  
+    provider.memory = 1024
   end
 
   vagrant.vm.define 'clojuredev01' do |config|
