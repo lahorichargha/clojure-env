@@ -10,6 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |vagrant|
 
   vagrant.vm.define 'clojuredev01' do |config|
     config.vm.network :forwarded_port, guest: 5000, host: 5000, auto_correct: false
+    config.vm.network "private_network", ip: "10.100.100.10"
+    config.vm.synced_folder 'app', '/opt/app', type: 'nfs'
     config.vm.provision :ansible do |ansible|
       ansible.playbook = 'ansible/development.yml'
       ansible.groups   = {'clojuredev' => ['clojuredev01'], 'vagrant_environment' => ['clojuredev01']}

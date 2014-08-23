@@ -12,6 +12,6 @@
 
 - include: git_config.yml
 
-- include: custom_env.yml
+#- include: custom_env.yml
 
-- include: clojure_apps.yml
+#- include: clojure_apps.yml
