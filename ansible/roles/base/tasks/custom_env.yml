@@ -11,7 +11,7 @@
     accept_hostkey=true
     update=false
 
-- name: run the saltmines setup script
-  command: >
-    sh /tmp/salt-mines/deploy.sh
-    creates=~/.custom_env_created
+#- name: run the saltmines setup script
+#  command: >
+#    sh /tmp/salt-mines/deploy.sh
+#    creates=~/.custom_env_created
